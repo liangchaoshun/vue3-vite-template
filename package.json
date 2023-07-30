@@ -1,0 +1,77 @@
+{
+  "name": "vue3-vite-template",
+  "private": true,
+  "version": "0.1.0",
+  "author": "",
+  "type": "module",
+  "description": "",
+  "keywords": [
+    "vue3",
+    "typscript",
+    "eslint",
+    "prettier"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build:lint": "vue-tsc && vite build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint:eslint": "eslint {library,mock,src}/**/*.{vue,ts,tsx} --fix",
+    "lint:prettier": "prettier {library,src,mock}/**/*.{html,vue,css,sass,scss,ts,md} --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,vue}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "naive-ui": "^2.34.4",
+    "normalize.css": "^8.0.1",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6",
+    "unocss": "^0.53.6",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.4.7",
+    "vue-tsc": "^1.8.8"
+  },
+  "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
