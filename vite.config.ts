@@ -18,7 +18,7 @@ export default defineConfig({
     }),
   ],
   resolve: {
-    alias: { '@': '/src' },
+    alias: { '@': 'src' },
   },
   css: {
     // 指定传递给 CSS 预处理器的选项。文件扩展名用作选项的键
@@ -30,5 +30,8 @@ export default defineConfig({
         additionalData: `@import "@/assets/sass/common.scss";`, // 支持引入多个文件（ ; 号分隔）
       },
     },
+  },
+  server: {
+    host: '0.0.0.0',
   },
 })

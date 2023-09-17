@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-const msg = 'Hello Home.vue'
+const msg = 'Hello About.vue'
 </script>
 
 <style scoped lang="scss"></style>

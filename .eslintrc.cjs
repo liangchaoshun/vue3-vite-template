@@ -16,6 +16,13 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    glMatrix: 'readonly',
+    Filament: 'readonly',
+    Trackball: 'readonly',
+    vec3: true,
+    vec4: true,
+    mat3: true,
+    mat4: true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -47,5 +54,6 @@ module.exports = {
     'object-curly-spacing': [1, 'always'],
     'vue/multi-word-component-names': 1,
     camelcase: 0, // 允许变量非驼峰式命名
+    'max-len': [2, { code: 150 }],
   },
 }
